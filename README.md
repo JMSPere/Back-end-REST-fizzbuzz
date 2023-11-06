@@ -26,8 +26,8 @@ Integration testing ensures that the application implementations as a whole work
 ## Libraries
 
 - Autofac
+- Autofac.Wcf.Integration
 - log4net
-- MethodBoundaryAspect
 - System.IO.Abstractions
 
 ## Roadmap
@@ -35,20 +35,21 @@ Integration testing ensures that the application implementations as a whole work
 - [x] Distributed web services Contracts
 - [x] Distributed web services Unit Tests
 - [x] Distributed web services implementation
-- [x] Distributed web services integration Tests
+- [ ] Distributed web services integration Tests
 - [x] Application Service layer contracts
 - [x] Application Service layer Unit Tests
 - [x] Domain Entities
-- [ ] Infrastructure layer
-- [ ] Infrastructure unit tests
+- [x] Infrastructure layer
+- [x] Infrastructure unit tests
 - [ ] Infrastructure integration tests
 - [ ] CrossCutting Custom exceptions
-- [ ] CrossCutting Utils
 - [ ] CrossCutting Aspects
 - [ ] CrossCutting TestHelper
-- [ ] CrossCutting Logging
-- [ ] CrossCutting Configuration
-- [ ] API Rest configuration
+- [x] CrossCutting Logging
+- [x] CrossCutting Configuration
+- [x] API Rest configuration
+- [ ] Global exception testing
+- [ ] Logging
 
 ## Solid Principles
 
@@ -57,48 +58,33 @@ In the development process of this project Solid Principles are put into practic
 - Single Responsability
 Class and methods only have one separate concept as responsability.
 
-        public class Student
-        {
-        [DataMember]
-        public long Id { get; set; }
-
-        [DataMember]
-        public string Guid { get; set; }
-
-        [DataMember]
-        public string Name { get; set; }
-
-        [DataMember]
-        public string Surname { get; set; }
-
-        [DataMember]
-        public DateTime Birthdate { get; set; }
-
-        [DataMember]
-        public string FullName;
-
-        [DataMember]
-        public int Age;
-        }
+An example of it is the method in application services calles ParseNumber, which converts the given string as a parameter into an integer (Int32).
 
 - Open/Closed
-Example of class that is open for extension, but closed for modification is the StudentApplicationService, which implements de IStudentApplicationService as a form of extension of it. At the same time the interface works as a closed entity that is still expansible.
+Example of class that is open for extension, but closed for modification is the FizzbuzzAppService, which implements de IStudentApplicationService as a form of extension of it. At the same time the interface works as a closed entity that is still expansible.
 
 - Liskov Substitution
 Objects may be replaced by a sub-object that are extensions of it without breaking the program. In this project we can find that in the implementation of the custom exceptions, since they extend web extensions and the default extension classes in C#.
 
 - Interface Segregation
-This principle states that large interfaces should be split into smaller more specific ones allowing the clients to know only of the methods they need. An example of this principle ocurring in this project is given in the Infrastructure domain, in which we can find 2 separate interfaces: IStudentRepository and IFileManager.
+This principle states that large interfaces should be split into smaller more specific ones allowing the clients to know only of the methods they need. An example of this principle ocurring in this project is given in the Infrastructure domain, in which we can find 2 separate interfaces: IFizzbuzzRepository and IFileManager.
 
 ## DDD architechture
 
-/
-|-- src
-|   |-- DistributedWebServices
-|   |-- ApplicationServices
-|   |-- DomainEntities
-|   |-- Infrastructure
-|   |-- CrossCuttingLayer
+- DistributedWebServices
+- ApplicationServices
+- DomainEntities
+- Infrastructure
+- CrossCuttingLayer
 
 It is important to remark that the implementation of DDD in this project is not pure due to size reasons. It has been estimated overengineering to create DTOs and Data Models for the application and infrastructure layer respectively. Therefore, Domain Entities has been treated like it was a transversal/cross cutting member of the project.
+
+# General comments on the current state of the project
+
+The project lacks most of its integration tests due to problems configuring autofac Libary for its proper use. Also, unit testing is superficial due to time. If given continuity this project needs finishing and polishing in both integration and unit testin, specially integration. It also needs custom exceptions implementations, aspect oriented programming and some wrappers for the static methods of utils still to be developed.
+
+Finally I must say that even following a home made template by me, I started this project from scratch.
+
+Thanks for your time!
+
 
