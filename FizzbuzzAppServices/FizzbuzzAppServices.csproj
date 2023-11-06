@@ -77,6 +77,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj">
+      <Project>{cebec9c7-5082-402e-a971-9ff3b4acdab6}</Project>
+      <Name>Domain.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure.FizzbuzzRepository\Infrastructure.FizzbuzzRepository.csproj">
       <Project>{da227604-015a-4097-9210-738a8cc81d2a}</Project>
       <Name>Infrastructure.FizzbuzzRepository</Name>

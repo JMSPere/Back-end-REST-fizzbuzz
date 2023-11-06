@@ -69,6 +69,10 @@
       <Project>{75b2c331-a630-40a4-bf0c-e31bbab64a61}</Project>
       <Name>CrossCutting.Configuration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj">
+      <Project>{cebec9c7-5082-402e-a971-9ff3b4acdab6}</Project>
+      <Name>Domain.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

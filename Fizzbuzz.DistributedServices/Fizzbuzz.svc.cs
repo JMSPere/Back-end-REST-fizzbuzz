@@ -2,11 +2,13 @@
 using log4net;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using System.Web;
 
 namespace Fizzbuzz.DistributedServices
 {
@@ -32,7 +34,18 @@ namespace Fizzbuzz.DistributedServices
 
         public List<string> GetFizzbuzz(string number)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return _fizzbuzzAppServices.GetFizzbuzz(number);
+            }
+            catch (Exception ex) when (ex is HttpException ||
+                                       ex is WebFaultException ||
+                                       ex is ArgumentNullException ||
+                                       ex is DirectoryNotFoundException)
+            {
+                _log.Error("[ERROR]: Could not resolve the petition successfully");
+                throw ex;
+            }
         }
     }
 }

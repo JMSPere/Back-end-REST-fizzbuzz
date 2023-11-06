@@ -113,9 +113,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj">
+      <Project>{CEBEC9C7-5082-402E-A971-9FF3B4ACDAB6}</Project>
+      <Name>Domain.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fizzbuzz.DistributedServices\Fizzbuzz.DistributedServices.csproj">
       <Project>{6A32292C-B65F-4F82-908F-5A4076ADF19A}</Project>
       <Name>Fizzbuzz.DistributedServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FizzbuzzAppServices\FizzbuzzAppServices.csproj">
+      <Project>{4D64E5D4-52DF-4A06-B6A6-45EE9E485EB2}</Project>
+      <Name>FizzbuzzAppServices</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
