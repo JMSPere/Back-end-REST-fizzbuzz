@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using log4net;
 using CrossCutting.Configuration;
+using Domain.Entities;
 
 namespace Infrastructure.FizzbuzzRepository.Implementations
 {
@@ -24,7 +25,7 @@ namespace Infrastructure.FizzbuzzRepository.Implementations
             _log = log;
         }
 
-        public List<string> GetFizzbuzz(string number)
+        public List<string> SaveFizzbuzzList(FizzbuzzList fizzbuzzList)
         {
             throw new NotImplementedException();
         }

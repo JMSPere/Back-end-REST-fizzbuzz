@@ -113,9 +113,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CrossCutting.Configuration\CrossCutting.Configuration.csproj">
+      <Project>{75B2C331-A630-40A4-BF0C-E31BBAB64A61}</Project>
+      <Name>CrossCutting.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj">
+      <Project>{CEBEC9C7-5082-402E-A971-9FF3B4ACDAB6}</Project>
+      <Name>Domain.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FizzbuzzAppServices\FizzbuzzAppServices.csproj">
       <Project>{4D64E5D4-52DF-4A06-B6A6-45EE9E485EB2}</Project>
       <Name>FizzbuzzAppServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.FizzbuzzRepository\Infrastructure.FizzbuzzRepository.csproj">
+      <Project>{DA227604-015A-4097-9210-738A8CC81D2A}</Project>
+      <Name>Infrastructure.FizzbuzzRepository</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

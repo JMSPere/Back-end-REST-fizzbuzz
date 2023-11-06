@@ -6,6 +6,8 @@ using System.Linq;
 using System.Web;
 using FizzbuzzAppServices;
 using FizzbuzzAppServices.AutofacModule;
+using FizzbuzzAppServices.Contracts;
+using FizzbuzzAppServices.Implementations;
 
 namespace Fizzbuzz.DistributedServices.Configuration
 {
@@ -20,7 +22,7 @@ namespace Fizzbuzz.DistributedServices.Configuration
 
             builder.RegisterType<Fizzbuzz>().As<IFizzbuzz>().InstancePerDependency();
 
-            //builder.RegisterType<StudentAppService>().As<IStudentAppService>().InstancePerDependency();
+            builder.RegisterType<FizzbuzzAppServices.Implementations.FizzbuzzAppServices>().As<IFizzbuzzAppServices>().InstancePerDependency();
 
 
             return builder.Build();
