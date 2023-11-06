@@ -27,7 +27,11 @@ namespace Infrastructure.FizzbuzzRepository.Implementations
 
         public List<string> SaveFizzbuzzList(FizzbuzzList fizzbuzzList)
         {
-            throw new NotImplementedException();
+            var filePath = _configuration.FilePath;
+
+            _fileManager.CreateFile(filePath);
+            _fileManager.WriteFile(filePath, fizzbuzzList.StringList);
+            return fizzbuzzList.StringList;
         }
     }
 }

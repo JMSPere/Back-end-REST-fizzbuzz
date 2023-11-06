@@ -16,6 +16,8 @@ namespace CrossCutting.Configuration
             {
                 string projectPath = AppDomain.CurrentDomain.BaseDirectory + "\\bin";
                 DateTime dateTime = DateTime.Now;
+                //create a string format suitable for a file name
+                //string fileName = dateTime.ToString("yyyy-MM-dd-HH-mm-ss");
                 string fileName = dateTime.ToString(WebConfigurationManager.AppSettings["dateFormat"]);
 
                 string filePath = Path.Combine(projectPath, fileName);
