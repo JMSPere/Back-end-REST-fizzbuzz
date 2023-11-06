@@ -13,14 +13,6 @@ namespace Fizzbuzz.DistributedServices
     public interface IFizzbuzz
     {
         [OperationContract]
-        [WebInvoke(Method = "GET",
-            UriTemplate = "/Foo",
-            BodyStyle = WebMessageBodyStyle.Wrapped,
-            RequestFormat = WebMessageFormat.Json,
-            ResponseFormat = WebMessageFormat.Json)]
-        int Foo();
-
-        [OperationContract]
         [WebInvoke(Method = "POST",
             UriTemplate = "/Fizzbuzz/{number}",
             BodyStyle = WebMessageBodyStyle.Wrapped,

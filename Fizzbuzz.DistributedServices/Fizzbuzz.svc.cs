@@ -27,10 +27,6 @@ namespace Fizzbuzz.DistributedServices
             _fizzbuzzAppServices = fizzbuzzAppServices;
             _log = log;
         }
-       public int Foo()
-        {
-            return 1;
-        }
 
         public List<string> GetFizzbuzz(string number)
         {
