@@ -8,6 +8,7 @@ In this project I show my solution to the problem proposed by this first exam of
 
 ## Recommended steps for execution
 
+The path for opening the solution of the present project is  Fizzbuzz.DistributedServices\Fizzbuzz.DistributedServices.sln. The project has been coded using Visual Studio Community 2022.
 I strongly recommend to rebuild the solution before its execution and testing. This is due to the fact that some packages - later specified - may need to be installed. I also recommend to test the functionality of the application with postman or any other REST test suite.
 
 ## Stack
