@@ -48,6 +48,9 @@
     <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\Fizzbuzz.DistributedServices\packages\Castle.Core.4.0.0\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\Fizzbuzz.DistributedServices\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\Fizzbuzz.DistributedServices\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -79,8 +82,15 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\Fizzbuzz.DistributedServices\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Abstractions, Version=19.0.0.0, Culture=neutral, PublicKeyToken=96bf224d23c43e59, processorArchitecture=MSIL">
+      <HintPath>..\Fizzbuzz.DistributedServices\packages\System.IO.Abstractions.19.2.69\lib\net461\System.IO.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Abstractions.TestingHelpers, Version=19.0.0.0, Culture=neutral, PublicKeyToken=96bf224d23c43e59, processorArchitecture=MSIL">
+      <HintPath>..\Fizzbuzz.DistributedServices\packages\System.IO.Abstractions.TestingHelpers.19.2.69\lib\net461\System.IO.Abstractions.TestingHelpers.dll</HintPath>
     </Reference>
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\Fizzbuzz.DistributedServices\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
@@ -94,6 +104,16 @@
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\Fizzbuzz.DistributedServices\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="TestableIO.System.IO.Abstractions, Version=19.0.0.0, Culture=neutral, PublicKeyToken=96bf224d23c43e59, processorArchitecture=MSIL">
+      <HintPath>..\Fizzbuzz.DistributedServices\packages\TestableIO.System.IO.Abstractions.19.2.69\lib\net461\TestableIO.System.IO.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="TestableIO.System.IO.Abstractions.TestingHelpers, Version=19.0.0.0, Culture=neutral, PublicKeyToken=96bf224d23c43e59, processorArchitecture=MSIL">
+      <HintPath>..\Fizzbuzz.DistributedServices\packages\TestableIO.System.IO.Abstractions.TestingHelpers.19.2.69\lib\net461\TestableIO.System.IO.Abstractions.TestingHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="TestableIO.System.IO.Abstractions.Wrappers, Version=19.0.0.0, Culture=neutral, PublicKeyToken=96bf224d23c43e59, processorArchitecture=MSIL">
+      <HintPath>..\Fizzbuzz.DistributedServices\packages\TestableIO.System.IO.Abstractions.Wrappers.19.2.69\lib\net461\TestableIO.System.IO.Abstractions.Wrappers.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
@@ -114,6 +134,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CrossCutting.Configuration\CrossCutting.Configuration.csproj">
+      <Project>{75B2C331-A630-40A4-BF0C-E31BBAB64A61}</Project>
+      <Name>CrossCutting.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrossCutting.Logging\CrossCutting.Logging.csproj">
+      <Project>{9023D90C-794E-4BB8-A644-B35261D61B74}</Project>
+      <Name>CrossCutting.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.Entities\Domain.Entities.csproj">
+      <Project>{CEBEC9C7-5082-402E-A971-9FF3B4ACDAB6}</Project>
+      <Name>Domain.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure.FizzbuzzRepository\Infrastructure.FizzbuzzRepository.csproj">
       <Project>{DA227604-015A-4097-9210-738A8CC81D2A}</Project>
       <Name>Infrastructure.FizzbuzzRepository</Name>

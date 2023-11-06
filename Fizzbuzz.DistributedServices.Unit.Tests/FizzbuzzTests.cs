@@ -26,7 +26,7 @@ namespace Fizzbuzz.DistributedServices.Unit.Tests
                 var expectedFizzbuzz = new FizzbuzzList()
                 {
                     Number = 10,
-                    StringList = new List<string>() { "1, 2, fizz, 4, 5, fizz, 7, 8, fizz, 10" }
+                    StringList = new List<string>() { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz" }
                 };
 
                 mock.Mock<IFizzbuzzAppServices>()

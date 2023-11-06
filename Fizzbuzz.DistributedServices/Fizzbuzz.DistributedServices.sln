@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.FizzbuzzRepo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.FizzbuzzRepository.Integration.Tests", "..\Infrastructure.FizzbuzzRepository.Integration.Tests\Infrastructure.FizzbuzzRepository.Integration.Tests.csproj", "{7B9618E5-1A3F-4EEA-849D-5B92AB28FD6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting.Logging", "..\CrossCutting.Logging\CrossCutting.Logging.csproj", "{9023D90C-794E-4BB8-A644-B35261D61B74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{7B9618E5-1A3F-4EEA-849D-5B92AB28FD6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B9618E5-1A3F-4EEA-849D-5B92AB28FD6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B9618E5-1A3F-4EEA-849D-5B92AB28FD6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9023D90C-794E-4BB8-A644-B35261D61B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9023D90C-794E-4BB8-A644-B35261D61B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9023D90C-794E-4BB8-A644-B35261D61B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9023D90C-794E-4BB8-A644-B35261D61B74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,6 +107,7 @@ Global
 		{64B7B95C-519A-49DD-8CDF-69994CF45BCB} = {FBDC48ED-8CE7-4588-A2C5-F704B0BE8CA3}
 		{0AA9E54F-9637-4422-ACDB-AA372CB2807D} = {3D516C4B-C67D-40E9-B0F1-6628D31CAD76}
 		{7B9618E5-1A3F-4EEA-849D-5B92AB28FD6E} = {3D516C4B-C67D-40E9-B0F1-6628D31CAD76}
+		{9023D90C-794E-4BB8-A644-B35261D61B74} = {A3369C1D-1A60-4CA6-BD92-05D2836229E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4AE0A305-79CF-4086-A616-590ED74D4BD5}

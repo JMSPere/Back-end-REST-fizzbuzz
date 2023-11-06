@@ -44,16 +44,6 @@ namespace FizzbuzzAppServices.Implementations.Unit.Tests
 
                 mock.Mock<IConfiguration>()
                     .Verify(configuration => configuration.MaxNumber, Times.Exactly(1));
-
-                /*mock.Mock<IFizzbuzzRepository>()
-                    .Verify(fizzbuzzRepository => fizzbuzzRepository.SaveFizzbuzzList(expectedFizzbuzz), Times.Exactly(1));*/
-
-                foreach (var item in result)
-                {
-                    Console.WriteLine(item);
-                }
-
-                //Assert.IsTrue(result.Equals(expectedFizzbuzz.StringList));
             }
         }
 
