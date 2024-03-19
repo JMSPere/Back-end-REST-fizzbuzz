@@ -1,10 +1,8 @@
 Name: Pere Joan
 Surname: Mateu Salvà
 
-# Back-End-Exam-1
-.NET Vueling University  06/11/2023 exam
-
-In this project I show my solution to the problem proposed by this first exam of the .NET Vueling University in november 2023 edition.
+# Back-End REST API fizzbuzz with WCF
+Used as a practice exercise
 
 ## Recommended steps for execution
 
